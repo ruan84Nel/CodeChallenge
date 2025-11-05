@@ -101,9 +101,13 @@ If you want to prefer shorter words (or alphabetical) when scores tie, modify `u
 
 ## Complexity
 
-- Let **N** be number of words and **L** avg word length.
-- Scoring is **O(L)**; maintaining Top-3 is **O(1)**.
-- Total ≈ **O(N·L)**, single pass, tiny memory.
+You read each word once.
+
+- For each word, you add up its letter scores. The time this takes grows with the word’s length.
+
+- Keep only the best 3 scores as you go, which takes constant, tiny work per word.
+
+So overall: if there are N words and each is about L letters long, the work is roughly N × L steps. One pass through the file, almost no extra memory.
 
 ## Quick sanity check (manual)
 
