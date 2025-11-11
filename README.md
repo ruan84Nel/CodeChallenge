@@ -20,9 +20,11 @@ Small console app that reads a word list from a local file, scores each word usi
 
 ## Files
 
-- `Main.java` — program entry point.
-- `input2.txt` — word list (one word per line).
+- `Main.java` — program entry point when reading from a local file (`input2.txt`).
+- `Main2.java` — alternative entry point that reads the word list directly from the JSON URL.
+- `input2.txt` — word list (one word per line) used by `Main.java`.
 - `output.txt` — generated, contains all `word,score` pairs.
+
 
 ## Getting `input2.txt` from the provided JSON
 
@@ -42,6 +44,8 @@ This resulted in one word per line.
 
 ## Running
 
+### Option 1: Read from local file (`Main.java`)
+
 ```bash
 # compile
 javac Main.java
@@ -51,6 +55,19 @@ java Main
 
 #OR
 Using Intellij, just click the play button on the main.java class (org/example/Main.java)
+```
+
+### Option 2: Read directly from JSON URL ('Main2.java')
+
+```bash
+# compile
+javac Main2.java
+
+# run
+java Main2
+
+#OR
+Using Intellij, just click the play button on the main.java class (org/example/Main2.java)
 ```
 
 ### Expected console output (example)
